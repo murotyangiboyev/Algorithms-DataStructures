@@ -10,5 +10,12 @@ class Main{
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
+        System.out.println();
+
+        int[] array2 = {10, 4, 2, 5, 2 , 0, 4, 11};
+        MergeSort.mergeSort(array2);
+        for (int i = 0; i < array2.length; i++) {
+            System.out.print(array2[i] + " ");
+        }
     }
 }

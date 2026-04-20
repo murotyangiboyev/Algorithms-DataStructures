@@ -13,6 +13,10 @@ public class HashSetExample {
         hashSet.add(4);
 
         System.out.println(hashSet.contains(1));
+        HashSet<Integer> hashSet2 = (HashSet<Integer>) hashSet.clone();
+        hashSet.remove(1);
+        hashSet.clear();
+        System.out.println(hashSet2);
 
     }
 }

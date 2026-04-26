@@ -2,11 +2,25 @@ package Set;
 
 import com.sun.source.tree.Tree;
 
+import java.security.KeyPair;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
+
+
+class Pair{
+
+    int first;
+    int second;
+
+    public Pair(int first,int second){
+        this.first=first;
+        this.second=second;
+    }
+}
 
 public class TreeSett {
 
@@ -40,6 +54,25 @@ public class TreeSett {
 
         SortedSet<Integer> set2  = treeSet.subSet(10, 51);
         System.out.println(set2);
+
+        TreeSet<Pair> treeSet2 = new TreeSet<>((a, b) -> {
+            if (a.first != b.first){
+                return Integer.compare(a.first, b.first);
+            }
+            return Integer.compare(a.second, b.second);
+        });
+
+        treeSet2.add(new Pair(1,2));
+        treeSet2.add(new Pair(2,3));
+        treeSet2.add(new Pair(3,4));
+        treeSet2.add(new Pair(1,1));
+
+        treeSet2.remove(new Pair(1,2));
+        Iterator itr2 = treeSet2.iterator();
+        while(itr2.hasNext()){
+            Pair pair = (Pair)itr2.next();
+            System.out.println(pair.first + " " + pair.second);
+        }
     }
 
 

@@ -6,6 +6,7 @@ import java.security.KeyPair;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -32,6 +33,12 @@ public class TreeSett {
         treeSet.add(3);
         treeSet.add(0);
         treeSet.add(4);
+
+        int res = treeSet.floor(0);
+        int res2 = treeSet.ceiling(0);
+        int res3 = treeSet.lower(1);
+        int res4 = treeSet.higher(1);
+        System.out.println(res + " " + res2 + " " + res3 + " " + res4);
 
         int first = treeSet.first();
         int last = treeSet.last();
@@ -67,10 +74,30 @@ public class TreeSett {
         treeSet2.add(new Pair(3,4));
         treeSet2.add(new Pair(1,1));
 
+
+        Pair ress = treeSet2.floor(new Pair(1, 2));
+
+
         treeSet2.remove(new Pair(1,2));
         Iterator itr2 = treeSet2.iterator();
         while(itr2.hasNext()){
             Pair pair = (Pair)itr2.next();
+            System.out.println(pair.first + " " + pair.second);
+        }
+
+        TreeSet<Pair> treeSet3 = new TreeSet<>((a, b) -> {
+            if (a.first != b.first){
+                return Integer.compare(a.first, b.first);
+            }
+            return Integer.compare(a.second, b.second);
+        });
+        treeSet3.add(new Pair(1,2));
+        treeSet3.add(new Pair(1,1));
+        treeSet3.add(new Pair(2,3));
+
+        Iterator itr3 = treeSet3.iterator();
+        while(itr3.hasNext()){
+            Pair pair = (Pair)itr3.next();
             System.out.println(pair.first + " " + pair.second);
         }
     }

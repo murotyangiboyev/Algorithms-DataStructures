@@ -34,10 +34,5 @@ public class TreeMapp {
         System.out.println(map.floorEntry(100).getValue());
         System.out.println(map.higherKey(1));
         System.out.println(map.lowerEntry(3).getValue());
-
-        SortedMap<Integer, String> sortedMap = map.floorEntry(100);
-
-        SortedMap<Integer, String> sortedMap = map.subMap(1, 4);
-        System.out.println(sortedMap);
     }
 }

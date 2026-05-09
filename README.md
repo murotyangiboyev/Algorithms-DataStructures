@@ -1,47 +1,11 @@
 # Algorithms & Data Structures
 
+This repository is about algorithms and data structures that i am learning.
+Using them, I constantly solve leetcode problems.
 
+When i learn a new data structure or algorithm, i try to solve at least 3 leetcode problems to 
+understand the structure more broadly and deeply.
 
+You can also review the data structures and algorithms to learn them.
+They are written in a clean way.
 
-
-
-
-
-
-
-
-
-
-### 1. Merge Sort
-A stable, divide-and-conquer sorting algorithm that works by recursively splitting arrays.
-
-| Case | Time Complexity | Space Complexity |
-| :--- | :--- | :--- |
-| **Average/Worst** | $O(n \log n)$ | $O(n)$ |
-
-**How it works:**
-* **Divide:** Split the unsorted list into $n$ sub-lists.
-* **Conquer:** Recursively sort the sub-lists.
-* **Combine:** Merge the sorted sub-lists to produce the final sorted list.
----
-
-
-
-
-
-
-
-
-
-### 2. Quick Sort
-An efficient, in-place sorting algorithm that uses a "pivot" element.
-
-| Case | Time Complexity | Space Complexity |
-| :--- | :--- | :--- |
-| **Average** | $O(n \log n)$ | $O(\log n)$ |
-| **Worst** | $O(n^2)$ | $O(n)$ |
-
-**How it works:**
-* **Pivot:** Pick an element from the array.
-* **Partition:** Reorder the array so elements less than the pivot are on the left.
-* **Recursion:** Apply the same steps to the left and right sub-arrays.
